@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-08-31T11:42:59+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Klise Theme</title><subtitle>He's writing in Bahasa about web technology and experience as a journal  for documentation things that he learned, meet him &lt;a href=&quot;https://github.com/piharpi&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;@github&lt;/a&gt;.</subtitle><author><name>Jekyll Klisé</name><email>your-email@email.com</email></author><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-08-29T09:29:20+07:00</published><updated>2020-08-29T09:29:20+07:00</updated><id>http://localhost:4000/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-08-31T01:08:49-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Adithya Vellal</title><subtitle></subtitle><author><name>Adithya Vellal</name><email>your-email@email.com</email></author><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-08-28T22:29:20-04:00</published><updated>2020-08-28T22:29:20-04:00</updated><id>http://localhost:4000/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
 
@@ -14,233 +14,7 @@
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Jekyll Klisé</name><email>your-email@email.com</email></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Cara ribet memperbarui forked repo</title><link href="http://localhost:4000/cara-memperbarui-fork-repository/" rel="alternate" type="text/html" title="Cara ribet memperbarui forked repo" /><published>2020-01-29T01:00:00+07:00</published><updated>2020-01-29T01:00:00+07:00</updated><id>http://localhost:4000/cara-memperbarui-fork-repository</id><content type="html" xml:base="http://localhost:4000/cara-memperbarui-fork-repository/">&lt;p&gt;Berawal dari saya pengen memperbarui repo yang tua dari suatu organisasi, niatnya pengen rumat ulang nih, ternyata dari orginal reponya ada update, sekalian buat artikel deh, lebih kurang gambaranya seperti ini.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img src=&quot;/cara-memperbarui-fork-repository/repo.png&quot; alt=&quot;ilustrasi repo yang mau diupdate&quot; /&gt;
-&lt;figcaption&gt;Fig 1. Gambaran ribetnya.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Ada dua cara untuk memperbarui forked repository menggunakan web interface yang disediakan oleh github tapi ribet, atau melalui terminal yang lebih ribet lagi.&lt;/p&gt;
-
-&lt;h3 id=&quot;melalui-github-boring-way-&quot;&gt;Melalui Github (boring way) 💻&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Buka repo yang hasil fork di Github.&lt;/li&gt;
-  &lt;li&gt;Klik &lt;strong&gt;Pull Requests&lt;/strong&gt; di sebelah kanan, lalu &lt;strong&gt;New Pull Request&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;Akan memunculkan hasil compare antara repo upstream dengan repo kamu(forked repo), dan jika menyatakan “There isn’t anything to compare.”, tekan link &lt;strong&gt;switching the base&lt;/strong&gt;, yang mana sekarang repo kamu(forked repo) akan dibalik menjadi base repo dan repo upstream menjadi head repo.&lt;/li&gt;
-  &lt;li&gt;Tekan &lt;strong&gt;Create Pull Request&lt;/strong&gt;, beri judul pull request, Tekan &lt;strong&gt;Send Pull Request&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;Tekan &lt;strong&gt;Merge Pull Request&lt;/strong&gt; dan &lt;strong&gt;Confirm Merge&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;* &lt;em&gt;pastikan kamu tidak merubah apapun pada forked repo, supaya melakukan merge secara otomatis, kalo tidak ya paling2 konflik.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;melalui-terminal-️&quot;&gt;Melalui terminal ⌨️&lt;/h3&gt;
-
-&lt;p&gt;Tambahkan remote alamat repository yang aslinya disini tak beri nama &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;upstream&lt;/code&gt;., ganti &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ORIGINAL_OWNER&lt;/code&gt; dan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ORIGINAL_REPO&lt;/code&gt; dengan alamat repo aslimu.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add remote upstream git@github.com:ORIGINAL_OWNER/ORIGINAL_REPO.git
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; origin    git@github.com:piharpi/www.git &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;fetch&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# forked repo&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; origin    git@github.com:piharpi/www.git &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;push&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# forked repo&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; upstream    git@github.com:ORIGINAL_OWNER/ORIGINAL_REPO.git &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;fetch&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# upstream repo / original repo&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; upstream    git@github.com:ORIGINAL_OWNER/ORIGINAL_REPO.git &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;push&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# upstream repo / original repo&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Checkout ke local branch &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout master
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; Switched to branch &lt;span class=&quot;s1&quot;&gt;'master'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Jika sudah, Merge local repo dengan remote &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;upstream/master&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git merge upstream/master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Terakhir push local repo ke remote &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;origin&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;updating origin repo&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git push &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; origin master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Selamat mencoba cara ribet ini, semoga bisa dipahami, saya sendiri lebih senang melalui terminal, klo ada yang ribet kenapa cari yang mudah.&lt;/p&gt;
-
-&lt;h5 id=&quot;resources&quot;&gt;Resources&lt;/h5&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork&quot;&gt;Syncing a fork&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://rick.cogley.info/post/update-your-forked-repository-directly-on-github/#top&quot;&gt;Update your fork directly on Github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jekyll Klisé</name><email>your-email@email.com</email></author><category term="tips" /><category term="git" /><category term="software" /><summary type="html">Berawal dari saya pengen memperbarui repo yang tua dari suatu organisasi, niatnya pengen rumat ulang nih, ternyata dari orginal reponya ada update, sekalian buat artikel deh, lebih kurang gambaranya seperti ini.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/cara-memperbarui-fork-repository/repo.png" /><media:content medium="image" url="http://localhost:4000/cara-memperbarui-fork-repository/repo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">What is a shell? 🐚 adalah kerang ajaib?</title><link href="http://localhost:4000/apa-itu-shell/" rel="alternate" type="text/html" title="What is a shell? 🐚 adalah kerang ajaib?" /><published>2020-01-25T11:58:47+07:00</published><updated>2020-01-25T11:58:47+07:00</updated><id>http://localhost:4000/apa-itu-shell</id><content type="html" xml:base="http://localhost:4000/apa-itu-shell/">&lt;p&gt;&lt;a href=&quot;http://www.youtube.com/watch?v=tc4ROCJYbm0&amp;amp;t=70&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Dulu&lt;/a&gt; Sebelum adanya &lt;abbr title=&quot;Graphical User Interface&quot;&gt;GUI&lt;/abbr&gt; cara user berinteraksi dengan komputer menggunakan &lt;abbr title=&quot;Command Line Interface&quot;&gt;CLI&lt;/abbr&gt; yaitu mengetik baris perintah pada sebuah antarmuka dalam bentuk baris teks seperti 👇.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img src=&quot;/apa-itu-shell/terminal_nginx.gif&quot; alt=&quot;installing nginx in ubuntu&quot; /&gt;
-&lt;figcaption&gt;Fig 1. Terminal emulator, instalasi package dan check service.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Jika kamu pernah menggunakan unix/linux mungkin pernah menggunakan program diatas, bahkan mungkin setiap hari menggunakannya untuk mengeksekusi suatu perintah melalui &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_terminal_emulators&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;terminal emulator&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;User&lt;sup id=&quot;user&quot;&gt;&lt;a href=&quot;#user-ref&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt; tidak bisa secara langsung berkomunikasi dengan sebuah hardware komputer, maka dari itu kita membutuhkan sebuah sistem operasi; &lt;strong&gt;Kernel&lt;/strong&gt; adalah program yang merupakan inti utama dari sistem operasi komputer.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img src=&quot;/apa-itu-shell/kernel.png&quot; alt=&quot;kernel central of operating system&quot; /&gt;
-&lt;figcaption&gt;Fig 2. bagan kernel.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Kernel memfasilitasi interaksi antara komponen perangkat keras dan perangkat lunak, berperan untuk menangani permintaan input/ouput dari perangkat lunak, selanjutnya menerjemahkannya ke dalam pemrosesan data untuk diintruksikan ke CPU, sehingga Hardware(cpu, memory, devices) mengerti perintah yang dimaksud dari pengguna.&lt;/p&gt;
-
-&lt;p&gt;Ketika kita menginputkan suatu perintah pada terminal emulator, kernel tidak langsung mengerti perintah yang kita ketik, kita membutuhkan suatu interface sebagai perantara menuju kernel yaitu &lt;strong&gt;Shell&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img src=&quot;/apa-itu-shell/shell.png&quot; alt=&quot;shell&quot; /&gt;
-&lt;figcaption&gt;Fig 3. bagan komunikasi shell.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;mark&gt;Shell adalah sebuah command-line interpreter; program yang berperan sebagai penerjemah perintah yang diinputkan oleh User yang melalui terminal&lt;/mark&gt;, sehingga perintah tersebut bisa dimengerti oleh si Kernel.&lt;/p&gt;
-
-&lt;p&gt;Login shell biasanya ditetapkan oleh local System Administrator ketika pada saat pertama user kamu dibuat, kamu bisa lihat login shell yang sedang kamu gunakan dengan perintah dibawah ini.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$SHELL&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# atau&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Setiap shell mempunyai default prompt. beberapa shell yang paling umum:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;dollar sign&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# sh, ksh, bash&lt;/span&gt;
-% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;percent sign&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# csh, tcsh&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h5 id=&quot;terminologi-pada-shell-prompt&quot;&gt;Terminologi pada shell prompt&lt;/h5&gt;
-
-&lt;p&gt;Shell prompt adalah tempat dimana kita menuliskan suatu perintah, berikut adalah terminologinya ini membantu, jika kamu ingin mengetahui bagian-bagianya.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img src=&quot;/apa-itu-shell/term_shell_prompt.png&quot; alt=&quot;shell&quot; /&gt;
-&lt;figcaption&gt;Fig 4. bagian-bagin dari shell prompt.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Dibawah ini salah satu contoh perintah sederhana untuk menampilkan sebuah arsitektur CPU komputer yang sedang saya gunakan.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img src=&quot;/apa-itu-shell/terminal_lscpu.gif&quot; alt=&quot;installing nginx in ubuntu&quot; /&gt;
-&lt;figcaption&gt;Fig 5. menampilkan informasi tentang arsitektur CPU.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Dari perintah yang contohkan, ketika user mengetikan suatu inputan perintah di terminal dan menekan &lt;kbd&gt;ENTER&lt;/kbd&gt;, maka shell akan mengubah perintah user menjadi bahasa yang bisa dipahami oleh kernel, dan Kernel menerjemahkannya ke dalam pemrosesan data untuk diintruksikan ke Hardware sehingga menghasilkan output yg sesuai dengan perintah user.&lt;/p&gt;
-
-&lt;p&gt;Shell mempunyai beberapa macam dan turunan, berikut yang paling umum.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img src=&quot;/apa-itu-shell/shell_evolution.png&quot; alt=&quot;shell evolution&quot; /&gt;
-&lt;figcaption&gt;Fig 6. evaluasi shell dari tahun ke tahun.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Sedikit penjelasan dari gambar diatas.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Bourne shell &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sh&lt;/code&gt;
-Dikembangkan oleh Stephen Bourne di Bell Labs, yang kala itu sebagai pengganti Thompson shell(diciptakan Ken Thompson), banyak sistem unix-like tetap memiliki &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/bin/sh&lt;/code&gt;—yang mana menjadi symbolic link atau hard link, bahkan ketika shell lain yang digunakan tetap &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sh&lt;/code&gt; adalah sebagai dasarnya, sebagai kompatibilitas perintah.&lt;/li&gt;
-  &lt;li&gt;Korn shell &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ksh&lt;/code&gt; Unix shell yang dikembangkan oleh David Korn di Bell Labs,
-inisialiasi pengembangan ini berdasar pada source code Bourne shell, namun juga memiliki fitur &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;csh&lt;/code&gt; dan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sh&lt;/code&gt;, pengembanganya pun pada saat saya menulis ini pun terus &lt;a href=&quot;http://github.com/att/ast&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;terawat&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Bourne again shell &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bash&lt;/code&gt;
-adalah proyek ini open source &lt;a href=&quot;http://gnu.org/software/bash/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GNU project&lt;/a&gt; memilki kompatibel dengan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sh&lt;/code&gt; yang menggabungkan fitur penting dari &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ksh&lt;/code&gt; dan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;csh&lt;/code&gt;, dan menjadi salah satu shell yang paling umum digunakan (umumnya menjadi default shell login Linux dan Apple’s macOS Mojave).&lt;/li&gt;
-  &lt;li&gt;Z shell &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zsh&lt;/code&gt; ini mempunyai wadah komunitasnya disebutnya &lt;a href=&quot;http://ohmyz.sh/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;“Oh My Zsh”&lt;/a&gt;, plug-in dan theme &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zsh&lt;/code&gt; bisa kita temukan di komunitas ini, saya saat ini menggunakan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zsh&lt;/code&gt;, shell ini juga menjadi default dari sistem operasi macOS Catalina, yang menggantikan bash.&lt;/li&gt;
-  &lt;li&gt;friendly interactive shell &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fish&lt;/code&gt;
-yah sesuai dengan &lt;a href=&quot;http://fishshell.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;deskripsi&lt;/a&gt; di web nya, menurut saya shell ini fun banget, fitur yang saya sukai dari shell ini autosuggestions, dan konfigurasi yang mudah melalui web based.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Masih banyak yang belum dijelaskan pada tulisan ini jika masih tertarik, baca lebih &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_command-line_interpreters#Operating_system_shells&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;banyak&lt;/a&gt; dan juga &lt;a href=&quot;http://en.wikipedia.org/wiki/Comparison_of_command_shells&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;komparasinya&lt;/a&gt; masing-masing shell.&lt;/p&gt;
-
-&lt;p&gt;Jika kamu tertarik untuk mengubah default shell login pada sistem operasi, kamu bisa menginstall dengan cara mengikuti didokumentasi/cara penginstallan dimasing-masing shell disini saya tidak membahas karena distro yang kita pakai mungkin berbeda-beda.&lt;/p&gt;
-
-&lt;p&gt;Untuk menjadikan default shell login pada OS bisa menggunakan perintah ini.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# command&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;chsh &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;LOGIN]
-
-&lt;span class=&quot;c&quot;&gt;# contoh penggunaan&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;chsh &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /user/bin/zsh harpi
-&lt;span class=&quot;c&quot;&gt;# mengubah default shell user harpi menjadi zsh shell.&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;reboot
-
-&lt;span class=&quot;c&quot;&gt;# atau kamu juga bisa mengubah file /etc/passwd dan edit secara manual user shellnya.&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# jika masih bingung manfaatkan perintah man untuk melihat manual page.&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;man chsh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Terakhir untuk tulisan ini, shell memilki berbagai macam, pilihlah shell yang sesuai dengan keinginanmu untuk menunjang produktivitas dan sesuaikan dengan kebutuhan, terlalu banyak plugin dan kebingungan memilih tema itu buruk 😁.&lt;/p&gt;
-
-&lt;p&gt;Terimakasih sudah baca, &lt;em&gt;penulis menerima kritik dan saran.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;notes&quot;&gt;Notes&lt;/h5&gt;
-
-&lt;p&gt;&lt;small id=&quot;user-ref&quot;&gt;&lt;sup&gt;&lt;a href=&quot;#user&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt; Manusia yang mengoperasikan dan mengendalikan sistem komputer.&lt;/small&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;resources&quot;&gt;Resources&lt;/h5&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://developer.ibm.com/tutorials/l-linux-shells/&quot;&gt;Evolution shells in Linux&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.linfo.org/kernel.html&quot;&gt;Kernel Defintion&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cis.rit.edu/class/simg211/unixintro/Shell.html&quot;&gt;The Shell&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jekyll Klisé</name><email>your-email@email.com</email></author><category term="unix/linux" /><category term="cli" /><summary type="html">Dulu Sebelum adanya GUI cara user berinteraksi dengan komputer menggunakan CLI yaitu mengetik baris perintah pada sebuah antarmuka dalam bentuk baris teks seperti 👇.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/apa-itu-shell/shell_evolution.png" /><media:content medium="image" url="http://localhost:4000/apa-itu-shell/shell_evolution.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How this site was born 👶</title><link href="http://localhost:4000/how-this-site-was-made/" rel="alternate" type="text/html" title="How this site was born 👶" /><published>2018-09-28T09:45:47+07:00</published><updated>2018-09-28T09:45:47+07:00</updated><id>http://localhost:4000/how-this-site-was-made</id><content type="html" xml:base="http://localhost:4000/how-this-site-was-made/">&lt;p&gt;The website was made using Jekyll the one of open source static sites generator, and using my own simple theme, I called &lt;a href=&quot;https://github.com/piharpi/klise&quot;&gt;klisé&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;All the services are free, source code the site was placed on my &lt;a href=&quot;https://github.com/piharpi/mahendrata.now.sh&quot;&gt;github&lt;/a&gt; repository and intergration with &lt;del&gt;&lt;a href=&quot;https://netlify.com&quot;&gt;netlify&lt;/a&gt;&lt;/del&gt; service, another service that you can use is &lt;a href=&quot;https://pages.github.com/&quot;&gt;github page&lt;/a&gt; for hosting your own static site.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;lets-do-this&quot;&gt;Let’s do this&lt;/h4&gt;
-
-&lt;p&gt;So, before we start create a site, you need some tools, you can self paced for how to installing each tools, on this guide i’m just want to show you how to install jekyll and deploying in netlify, but make sure you have each tools below.&lt;/p&gt;
-
-&lt;h4 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h4&gt;
-
-&lt;p&gt;Requirements before we doing magic show.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.ruby-lang.org/en/downloads/&quot;&gt;Ruby&lt;/a&gt; programming language&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://git-scm.com&quot;&gt;Git&lt;/a&gt; (version control)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://netlify.com&quot;&gt;Netlify&lt;/a&gt; and &lt;a href=&quot;https://github.com&quot;&gt;Github&lt;/a&gt; account&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://bundler.io&quot;&gt;Bundler&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;installation&quot;&gt;Installation&lt;/h4&gt;
-
-&lt;p&gt;First, you need some &lt;a href=&quot;https://www.staticgen.com/&quot;&gt;SSG&lt;/a&gt;, there are many kind ssg, but in case i’m using Jekyll cause i’m already familiar with it, open your terminal and type command on below&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll &lt;span class=&quot;c&quot;&gt;# installing jekyll in your machine&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll new my-site &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;my-site &lt;span class=&quot;c&quot;&gt;# create new jekyll project&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll s &lt;span class=&quot;c&quot;&gt;# run jekyll server&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Now, jekyll is running on your local machine, open your browser and go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localhost:4000&lt;/code&gt; is default address from jekyll, press &lt;kbd&gt;CTRL&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt; to stop the jekyll server.&lt;/p&gt;
-
-&lt;h4 id=&quot;adding-remote-repository&quot;&gt;Adding remote repository&lt;/h4&gt;
-
-&lt;p&gt;Before we adding remote repository, you must have &lt;a href=&quot;https://github.com/new&quot;&gt;github&lt;/a&gt; repository, if already have repository, just add github remote address to your local folder, with the following commands&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git init &lt;span class=&quot;c&quot;&gt;# initializing project folder&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO.git &lt;span class=&quot;c&quot;&gt;# change UPPERCASE with your own!&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Initialize&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git push &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; origin master &lt;span class=&quot;c&quot;&gt;# push code to github&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Now check your github repository, make sure the files is uploaded correctly.&lt;/p&gt;
-
-&lt;h4 id=&quot;deploying-to-netlify&quot;&gt;Deploying to netlify&lt;/h4&gt;
-
-&lt;p&gt;Go &lt;a href=&quot;https://netlify.com&quot;&gt;netlify&lt;/a&gt; dashboard, and following this step.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;new site from git&lt;/code&gt;, then choose &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Github&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;then choose your repository where is the jekyll sources uploaded.&lt;/li&gt;
-  &lt;li&gt;netlify smart enough to configuring, we just need’s are hosting’s are hosting’s are hosting’s are hosting to click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Deploy site button&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Wait for moment, and voila..! your site’s are hosting and using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.netlify.com&lt;/code&gt; tld, if your website wants to look professional, just buy a domain from your favorite domain store. or if you the first time, I advice using namecheap.com&lt;em&gt;(isn’t sponsor)&lt;/em&gt; *based on my experienced it provides good service and have various TLDs.&lt;/p&gt;
-
-&lt;p&gt;So, what you waiting for, just create your own website for free.&lt;/p&gt;</content><author><name>Jekyll Klisé</name><email>your-email@email.com</email></author><category term="blog" /><category term="netlify" /><category term="jekyll" /><category term="github" /><summary type="html">The website was made using Jekyll the one of open source static sites generator, and using my own simple theme, I called klisé.</summary></entry><entry><title type="html">Python Notes from Intro to Machine Learning</title><link href="http://localhost:4000/python-notes-from-Intro-to-machine-learning/" rel="alternate" type="text/html" title="Python Notes from Intro to Machine Learning" /><published>2018-04-14T10:00:00+07:00</published><updated>2018-04-14T10:00:00+07:00</updated><id>http://localhost:4000/python-notes-from-Intro-to-machine-learning</id><content type="html" xml:base="http://localhost:4000/python-notes-from-Intro-to-machine-learning/">&lt;p&gt;&lt;strong&gt;This article is for Demo purpose&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Adithya Vellal</name><email>your-email@email.com</email></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Python Notes from Intro to Machine Learning</title><link href="http://localhost:4000/python-notes-from-Intro-to-machine-learning/" rel="alternate" type="text/html" title="Python Notes from Intro to Machine Learning" /><published>2018-04-13T23:00:00-04:00</published><updated>2018-04-13T23:00:00-04:00</updated><id>http://localhost:4000/python-notes-from-Intro-to-machine-learning</id><content type="html" xml:base="http://localhost:4000/python-notes-from-Intro-to-machine-learning/">&lt;p&gt;&lt;strong&gt;This article is for Demo purpose&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;The article was originally on &lt;a href=&quot;https://github.com/risan/risanb.com/blob/master/content/posts/python-notes-from-intro-to-machine-learning/index.md&quot;&gt;this repo&lt;/a&gt;&lt;/p&gt;
 
@@ -802,7 +576,7 @@ yah sesuai dengan &lt;a href=&quot;http://fishshell.com/&quot; target=&quot;_bla
 
 &lt;p&gt;&lt;strong&gt;This article is for Demo purpose&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;The article was originally on &lt;a href=&quot;https://github.com/risan/risanb.com/blob/master/content/posts/python-notes-from-intro-to-machine-learning/index.md&quot;&gt;this repo&lt;/a&gt;&lt;/p&gt;</content><author><name>Jekyll Klisé</name><email>your-email@email.com</email></author><category term="python" /><category term="machine-learning" /><summary type="html">This article is for Demo purpose</summary></entry><entry><title type="html">React Component with Dot Notation</title><link href="http://localhost:4000/react-component-with-dot-notation/" rel="alternate" type="text/html" title="React Component with Dot Notation" /><published>2018-04-07T23:04:00+07:00</published><updated>2018-04-07T23:04:00+07:00</updated><id>http://localhost:4000/react-component-with-dot-notation</id><content type="html" xml:base="http://localhost:4000/react-component-with-dot-notation/">&lt;p&gt;&lt;strong&gt;This article is for Demo purpose&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The article was originally on &lt;a href=&quot;https://github.com/risan/risanb.com/blob/master/content/posts/python-notes-from-intro-to-machine-learning/index.md&quot;&gt;this repo&lt;/a&gt;&lt;/p&gt;</content><author><name>Adithya Vellal</name><email>your-email@email.com</email></author><category term="python" /><category term="machine-learning" /><summary type="html">This article is for Demo purpose</summary></entry><entry><title type="html">React Component with Dot Notation</title><link href="http://localhost:4000/react-component-with-dot-notation/" rel="alternate" type="text/html" title="React Component with Dot Notation" /><published>2018-04-07T12:04:00-04:00</published><updated>2018-04-07T12:04:00-04:00</updated><id>http://localhost:4000/react-component-with-dot-notation</id><content type="html" xml:base="http://localhost:4000/react-component-with-dot-notation/">&lt;p&gt;&lt;strong&gt;This article is for Demo purpose&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;The article was originally on &lt;a href=&quot;https://github.com/risan/risanb.com/blob/master/content/posts/react-component-with-dot-notation/index.md&quot;&gt;this repo&lt;/a&gt;&lt;/p&gt;
 
@@ -900,4 +674,4 @@ yah sesuai dengan &lt;a href=&quot;http://fishshell.com/&quot; target=&quot;_bla
 
 &lt;p&gt;&lt;strong&gt;This article is for Demo purpose&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;The article was originally on &lt;a href=&quot;https://github.com/risan/risanb.com/blob/master/content/posts/react-component-with-dot-notation/index.md&quot;&gt;this repo&lt;/a&gt;&lt;/p&gt;</content><author><name>Jekyll Klisé</name><email>your-email@email.com</email></author><category term="javascript" /><category term="react" /><summary type="html">This article is for Demo purpose</summary></entry></feed>
+&lt;p&gt;The article was originally on &lt;a href=&quot;https://github.com/risan/risanb.com/blob/master/content/posts/react-component-with-dot-notation/index.md&quot;&gt;this repo&lt;/a&gt;&lt;/p&gt;</content><author><name>Adithya Vellal</name><email>your-email@email.com</email></author><category term="javascript" /><category term="react" /><summary type="html">This article is for Demo purpose</summary></entry></feed>
