@@ -5,8 +5,8 @@ layout: page
 excerpt: 
 comments: false
 ---
-[Email](avellal14@gmail.com)
+[Email](mailto:avellal14@gmail.com)
 
-[Twitter](twitter.com/avellal14)
+[Twitter](http://twitter.com/avellal14)
 
 [GitHub](http://github.com/{{site.author.github}})
