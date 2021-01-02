@@ -1,24 +1,10 @@
 [
   
     {
-      "title"    : "Welcome to Jekyll!",
+      "title"    : "Work in Progress",
       "tags"     : "",
       "url"      : "/welcome-to-jekyll/",
       "date"     : "2020-08-28 22:29:20 -0400"
-    } ,
-  
-    {
-      "title"    : "Python Notes from Intro to Machine Learning",
-      "tags"     : "python, machine-learning",
-      "url"      : "/python-notes-from-Intro-to-machine-learning/",
-      "date"     : "2018-04-13 23:00:00 -0400"
-    } ,
-  
-    {
-      "title"    : "React Component with Dot Notation",
-      "tags"     : "javascript, react",
-      "url"      : "/react-component-with-dot-notation/",
-      "date"     : "2018-04-07 12:04:00 -0400"
     } 
   
 ]

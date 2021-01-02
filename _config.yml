@@ -11,7 +11,7 @@ mode: dark # default theme "dark" | "light"
 author:
   name: Adithya Vellal # author name
   bio: >- # tell to the world
-    Personal site and blog, 
+    Personal site 
   username:  # general username
   github: avellal14 # github username
   twitter: twitter_username # twitter username
