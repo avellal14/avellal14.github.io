@@ -358,3 +358,19 @@ mark,
     }
   }
 }
+
+// Sus Clear Table
+.my-table {
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+    vertical-align: middle;
+
+    border: 0;
+    tr,
+    td {
+      border: 0;
+    }
+  }
+}
