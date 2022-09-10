@@ -1,9 +1,0 @@
-I"Á<p><strong>Why Pruning?</strong> <br />
-As deep learningâ€™s popularity continues to explode, an increasing number of companies
-have begun to rely on cutting-edge deep learning algorithms to deliver core product
-functionality to users. However, developing and deploying large neural networks is an
-extremely <a href="https://future.a16z.com/new-business-ai-different-traditional-software/">resource-intensive process</a>
-that quickly becomes a core business cost for these companies. Furthermore, many applications of deep learning, 
-ranging from mobile phone applications to robotic control systems, require rapid model inference.
-This is very difficult to accomplish with large and unwieldy models.</p>
-:ET
