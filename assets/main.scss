@@ -1,0 +1,10 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+/*
+override theme defaults
+*/
+$brand-color: #2AA198;
+
+
+@import "minima";

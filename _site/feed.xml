@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-10T11:03:46-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Adithya Vellal</title><subtitle></subtitle><entry><title type="html">A Primer on Neural Network Pruning</title><link href="http://localhost:4000/jekyll/update/2021/03/20/pruning.html" rel="alternate" type="text/html" title="A Primer on Neural Network Pruning" /><published>2021-03-20T23:00:00-04:00</published><updated>2021-03-20T23:00:00-04:00</updated><id>http://localhost:4000/jekyll/update/2021/03/20/pruning</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2021/03/20/pruning.html"><![CDATA[<p><strong>Why Pruning?</strong> <br />
+As deep learning’s popularity continues to explode, an increasing number of companies
+have begun to rely on cutting-edge deep learning algorithms to deliver core product
+functionality to users. However, developing and deploying large neural networks is an
+extremely <a href="https://future.a16z.com/new-business-ai-different-traditional-software/">resource-intensive process</a>
+that quickly becomes a core business cost for these companies. Furthermore, many applications of deep learning, 
+ranging from mobile phone applications to robotic control systems, require rapid model inference.
+This is very difficult to accomplish with large and unwieldy models.</p>
+
+<p>Ongoing research in neural network pruning aims to address many of these issues by
+exploring techniques for removing extraneous parameters from neural networks without
+compromising their accuracy. Smaller networks naturally require less space and are
+faster and cheaper to both train and deploy, making this line of work particularly
+important for those in industry actively seeking to reduce the costs surrounding model
+development and deployment.</p>
+
+<p><strong>Deep Learning 101</strong> <br />
+Before we dive into things, let’s quickly cover some important terms and concepts that
+will be referred to in subsequent sections. <em>Deep learning models</em>, also known as <em>neural
+networks</em>, are a class of machine learning algorithms that have found immense success
+in recent years. For simplicity’s sake, we will focus on <em>supervised learning tasks</em>, where
+we are provided with a set of datapoints and a corresponding set of labels describing
+these datapoints. Supervised learning with neural networks has been most successful
+in the domains of vision (image data) and language (text data). The goal is to learn a
+function, \(f\), that maps a given datapoint (such as an image or piece of text) to its
+corresponding label. \(f\) is parameterized by a neural network, which is defined by
+composing many matrix multiplications and subsequent nonlinearities on top of each
+other. For example, we can define \(f(x)\) for an input \(x\) and label \(y\) as follows, where \(w_1\) and
+\(w_2\) are coefficient matrices known as weights and \(h_1\) and \(h_2\) are nonlinear functions that
+are applied elementwise to their inputs: \(f(x) = h_2(w_2(h_1(w_1(x)))\). This can also be viewed as
+passing an input through consecutive layers of interconnected neurons where the
+connections between neurons are quantified using the weight matrices (\(w_1\) and \(w_2\)).
+Training a neural network refers to the process of iteratively updating the network’s
+weights so that its predictions on the given datapoints closely match the provided data
+labels. Neural networks can be trained using a variety of different optimization
+algorithms that provide instructions on how to update the weights in order to bestmatch the network 
+outputs to the labels. Model inference refers to the process of obtaining a trained network’s predictions on 
+new data in production.</p>
+
+<p><strong>The Lottery Ticket Hypothesis</strong> <br />
+Most of the recent research in model pruning was kickstarted by Jonathan Frankle and
+Michael Carbin’s 2018 paper titled <a href="https://arxiv.org/pdf/1803.03635.pdf">The Lottery Ticket Hypothesis: Finding Sparse,
+Trainable, Neural Networks</a>. The titular Lottery Ticket Hypothesis proposes that we view
+large neural networks as ensembles of many smaller subnetworks, a few of which will
+perform extremely well on the task at hand. However, there is no way to identify these
+winning subnetworks apriori, so we use really large networks to get more shots on goal
+and increase the likelihood that one of the component subnetworks is a winner. If we
+can find these winning subnetworks, or “lottery tickets”, then we can discard, or “prune”
+the rest of the network without sacrificing the accuracy. In practice, this is done using an
+iterative process with the following steps:</p>
+
+<ol>
+  <li>Initialize network weights and train to convergence on the given task</li>
+  <li>Identify smallest weights and prune them by setting them to zero</li>
+  <li>Repeat steps 1 and 2 with the remaining weights until the desired proportion of weights have been pruned</li>
+</ol>
+
+<p>While this approach does succeed in identifying winning subnetworks that amazingly
+manage to achieve similar performance to the original network, it does not offer any
+true cost savings for a few reasons. First of all, the iterative pruning process is actually
+more time-intensive than the standard training process for a neural network because it
+requires repeated re-initialization of the network weights. This is equivalent to re-training
+the network from scratch many times until the desired subnetwork size is reached. The
+hope of course is that the more expensive training leads to large savings during
+inference time. However, this turns out not to be the case. Frankle’s pruning method
+does not actively remove layers or weights from a network. Instead, it prunes weights by
+simply setting them to zero. While this does produce some space savings due to the
+storage of zeros instead of large floating point values, it does not lead to any speed
+improvement during inference. From a hardware standpoint, zero weights and non-zero
+weights look exactly the same. All the matrix multiplications involving the zero weights
+still have to be executed by the hardware because it has no way of determining which
+weights are zero and which are not ahead of time. Thus, networks pruned using this
+method do not offer any tangible reduction in the time and GPU compute required to
+perform inference.</p>
+
+<p>A few follow up works from Frankle et al. (<a href="https://arxiv.org/pdf/1903.01611.pdf">1</a>, <a href="https://arxiv.org/pdf/2002.10365.pdf">2</a>) along with another paper by <a href="https://papers.nips.cc/paper/2019/file/1113d7a76ffceca1bb350bfe145467c6-Paper.pdf">Zhou et al.</a> determine that while it is not necessary to re-initialize the weights completely during pruning, it is necessary to reset them their state in one of the earliest iterations of training. Setting all the pruned weights to zero appears to be crucial as well. While these papers do not offer any concrete speed improvements for either training or inference, they inform a variety of future research directions that are extremely promising. For example, research by <a href="https://research.fb.com/wp-content/uploads/2019/12/One-ticket-to-win-them-all-generalizing-lottery-ticket-initializations-across-datasets-and-optimizers.pdf">Morcos et al.</a> has found that lottery tickets learned for one dataset
+using a specific optimization algorithm can also transfer to other datasets and optimization algorithms. This suggests that these subnetworks could be encoding specific structure and connectivity characteristics that could be invariant to the particulars of a dataset or optimization procedure. Meanwhile, <a href="https://arxiv.org/pdf/1906.02768.pdf">Yu et al.</a> find that Frankle’s work extends beyond vision tasks and is effective on language and reinforcement learning tasks as well. The real hope here is that continued study of lottery tickets and their properties will eventually give us a way to identify a few golden ticket subnetworks whose structure and initial weight values work extremely well across a wide array of datasets. We can then directly initialize these subnetworks and realize significant savings during both training and inference time. Though we are not yet at this point, papers that have been published over the past few months seem to be moving in the right direction.</p>
+
+<p>One particularly promising recent work is <a href="https://arxiv.org/pdf/2006.05467.pdf">Tanaka et al.’s November 2020 paper</a>, which
+details a method for pruning without using any training data at all. This iterative process
+repeatedly prunes weights that exhibit a low “synaptic saliency”, a measure that
+quantifies how much each weight is contributing to the overall network output. The lack
+of dependence on training data allows this pruning method to execute very quickly, and
+Tanaka’s experiments indicate that it does outperform other methods that attempt
+pruning at the initialization stage prior to training. However, it still does not beat
+methods such as Frankle’s that utilize extensive training throughout the pruning
+process, and since it also prunes by setting weights to zero, it fails to produce tangible
+savings at training or inference time.</p>
+
+<p>(Note: Robert Lange’s <a href="https://roberttlange.github.io/posts/2020/06/lottery-ticket-hypothesis/#frankle_2019">blog post</a> on the lottery ticket hypothesis covers each of these papers in much more technical detail.)</p>
+
+<p><strong>Going from Unstructured to Structured Pruning</strong><br />
+All of the pruning methods discussed thus far have been unstructured, since they prune
+individual network weights by zeroing them without any regard for where in the network
+each weight is located. On the other hand, structured pruning methods seek to
+systematically eliminate entire network layers or replace layers with compressed
+versions of themselves. Since these methods actually reduce the total number of
+weights in the network, they offer the potential for real speedups during inference time.
+One older structured approach proposed by <a href="https://arxiv.org/pdf/1411.4229.pdf">Zhang et al.</a> 
+is based on a common dimensionality reduction technique known as principle components analysis, or PCA. As
+we mentioned previously, each layer of a network applies a matrix multiplication and
+subsequent elementwise nonlinearity to the input. This process of performing a matrix
+multiplication with the input is known as a linear transformation because it takes some
+linear combination of all the inputs and adds them together to obtain an output. Now,
+consider a 100-neuron layer. We can think of this layer as performing a linear
+transformation on its inputs that then results in a 100-dimensional output. PCA offers a
+way to capture most of the information present in this output using far fewer
+dimensions. Let us assume we can represent the 100-dimensional output using just 25
+dimensions. We can then replace our 100-neuron layer with a much smaller 25-neuron
+layer which directly outputs this compressed 25-dimensional output. Zhang et al. use
+this technique to prune trained networks when provided with a small subset of training
+data to compute the layerwise outputs described above.</p>
+
+<p>This method offers inference speedups of up to 4x while maintaining a high degree of
+accuracy. From a practical standpoint, this is also far simpler to integrate into existing
+deep learning development and deployment pipelines compared to a method like
+Frankle’s which would require a complete re-implementation of model training code.
+Companies can implement this algorithm as a post-training step without modifying their
+training or inference code at all. It is important to note that while the paper suggests
+that this pruning method offers a very favorable accuracy vs. speed tradeoff, it has only
+been tested on a specific image classification task with one particular network
+architecture. Those seeking to use this in practice will need to make a deployment-time
+decision on whether to use the pruned model or the original model based on the
+accuracy vs. speed tradeoff that it offers on their particular task. There is a good
+chance that it will be infeasible in settings that require extremely high accuracy on more
+complex tasks such as image segmentation or object detection due to the pruned
+models exhibiting a higher accuracy dropoff.</p>
+
+<p>Another interesting approach for structured pruning, proposed by <a href="https://arxiv.org/pdf/1705.08665.pdf">Louizos et al.</a>, makes
+use of a Bayesian perspective on neural networks. Instead of viewing each network
+weight as a fixed value, we view it as a probability distribution. Over the course of
+training, each weight’s distribution is updated based on the data it sees. When we want
+to compute the network’s output for a new training example, we sample each weight’s
+distribution and use the sampled value to perform the computation. Let us quickly
+consider the case of a weight with a high variance distribution after training. If we pass
+the same datapoint through the network multiple times, the sampled value of thisweight will vary widely. Despite this noisiness in the weight’s exact value, the network is able to perform its task effectively, suggesting that this weight minimally influences the
+network’s output. Louizos et al. extend this idea to learn distributions over entire layers
+instead of individual weights. Layers with high variance distributions after training are
+considered unimportant to the network’s performance and are pruned.</p>
+
+<p>Louizos’s experiments show that this method yields an 8x improvement on inference
+time and a 3x reduction in GPU compute costs during inference. Much like Zhang et al.’s
+work however, it is only tested on a single image classification task with a few different
+network architectures. Using this approach in an industry setting would first require
+extensive research and development in order to confirm that it maintains high accuracy
+for the task at hand. Additionally, Bayesian neural network training is far more
+time-intensive than traditional training, offsetting much of the inference speedup that
+this method offers.</p>
+
+<p>The final structured pruning approach that we will cover makes use of the <a href="https://openreview.net/pdf?id=BkeStsCcKQ">theory</a> 
+that the early stages of training are focused on learning connectivity patterns between layers
+which then get fixed in the later stages. <a href="https://arxiv.org/pdf/1909.11957.pdf">You et al.’s 2020 paper</a> views the output of
+convolutional neural networks as a weighted combination of all the filters present in the
+network (while the details of convolutional networks are not covered here for the sake
+of brevity, a comprehensive introduction can be found <a href="https://ayearofai.com/rohan-lenny-2-convolutional-neural-networks-5f4cd480a60b?gi=b7840221197c">here</a>). This view is more or less analogous to trying to learn a coefficient for each neuron in a neural network that
+quantifies its impact on the network’s final output. You et al. add an extra term to their
+training objective that penalizes the network for having high coefficients for too many
+neurons. As a result, the network quickly assigns zero coefficients to many of the
+neurons during training. These neurons can then be pruned. You’s iterative pruning
+strategy is quite similar to the one proposed by Frankle, but instead of training a network
+to convergence during every iteration, they only need to train around 20% of the way to
+convergence and can also do so using low-precision computations.</p>
+
+<p>The experiments conducted in this study suggest that the proposed pruning method
+offers a 6-10x energy savings over Frankle’s strategy. Despite using a structured pruning
+approach, the paper does not evaluate the pruned models’ performance during
+inference. There is no reason to believe that inference speedups comparable to Zhang
+and Louizos’s studies cannot be achieved, but this must be empirically verified.
+Of course, further work must also be done to test this method’s efficacy with larger
+models and more complex tasks outside the scope of the experiments detailed in the
+paper. Overall, this work appears to be the closest to offering true cost benefits during
+both training and inference time.</p>
+
+<p><strong>Conclusion</strong><br />
+Developments in model pruning research over the past few years have resulted in
+numerous promising avenues for reducing the immense costs associated with training
+and deploying neural networks. Work around unstructured pruning, while yet to offer
+tangible cost improvements, has provided numerous insights into the properties and
+training dynamics of neural networks. Continued work in this area will hopefully lead to
+algorithms for the systematic creation of small networks with architectures and initial
+weight values that perform extremely well on a given task or dataset. Meanwhile,
+research in structured pruning already offers tangible speedups, primarily in the model
+inference stage. Industry teams seeking to use these methods must however invest
+some time into research &amp; development in order to ensure that they maintain high levels
+of accuracy on the specific dataset and task at hand.</p>
+
+<p>Many companies that use deep learning, particularly AI-first companies who continually
+develop and deploy large neural networks, have already begun to invest resources into
+working on this problem due to the large costs they currently incur from both training
+and inference. Model pruning will continue to be an area of emphasis in the near future
+because effective pruning schemes will ultimately go a long way towards enabling these
+companies to achieve favorable margins at scale with deep learning-based products.</p>
+
+<!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+Jekyll requires blog post files to be named according to the following format:
+
+`YEAR-MONTH-DAY-title.MARKUP`
+
+Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/ -->]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[Why Pruning? As deep learning’s popularity continues to explode, an increasing number of companies have begun to rely on cutting-edge deep learning algorithms to deliver core product functionality to users. However, developing and deploying large neural networks is an extremely resource-intensive process that quickly becomes a core business cost for these companies. Furthermore, many applications of deep learning, ranging from mobile phone applications to robotic control systems, require rapid model inference. This is very difficult to accomplish with large and unwieldy models.]]></summary></entry></feed>
